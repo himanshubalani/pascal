@@ -17,6 +17,18 @@ h1 {
     margin-top: 0;
 }
 
+sup {
+
+	color: #333;
+	margin-left: 3.5px;
+}
+
+p {
+	font-weight:lighter;
+	color: #333;
+	margin-top: 0;
+}
+
 form {
     margin-bottom: 20px;
 }
@@ -49,6 +61,7 @@ button:hover {
 }
 
 .card {
+	margin: 5px;
     background-color: #fff;
     border-radius: 10px;
     padding: 20px;

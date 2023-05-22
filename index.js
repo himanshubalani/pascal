@@ -8,11 +8,23 @@ function apicall() {
   	fetch(url)
 	.then((response) => response.json())
 	.then((data) => {
-	  	let output = `
+	  	let currtemp = `
 	  	<div> 
 			<p>${data.current.temp_c}<sup>℃</p>
 	  	</div>`
 	;
-	  	document.getElementById("output").innerHTML = output;
+	  	document.getElementById("currtemp").innerHTML = currtemp;
+		let condition = `
+		<div>
+			<p>${data.current.condition.text}</p>
+		</div>`
+	;
+	document.getElementById("condition").innerHTML = condition;
+	let windspeed = `
+		<div>
+			<p>${data.current.wind_kph}<sup>kmph</p>
+		</div>`
+	;
+	document.getElementById("windspeed").innerHTML = windspeed;
 		}).catch((err) => console.log(err));
 }
