@@ -2,7 +2,7 @@ document.getElementById("search").addEventListener("click", apicall);
 
 
 function apicall() {
-	const apikey = config.apikeyc;
+	const apikey = config.apikey;
 	const cityname = document.getElementById("cityname").value;
   	const url = `https://api.weatherapi.com/v1/current.json?key=${apikey}&q=${cityname}&days=3&aqi=yes&alerts=no`;
   	fetch(url)
